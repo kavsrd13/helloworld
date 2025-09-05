@@ -1,0 +1,23 @@
+name: Demo 1 - My First Action
+
+# 👇 When should this run?
+on: [push]   # every time you push code
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest   # runs on GitHub’s free Linux VM
+
+    steps:
+      # Step 1: Checkout repo (so Actions can see your files)
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Step 2: Setup Python
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+
+      # Step 3: Run our script
+      - name: Run hello.py
+        run: python hello.py
