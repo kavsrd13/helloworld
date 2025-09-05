@@ -1,5 +1,5 @@
 def main():
-    print("🚀 Hello from GitHub Actions!")
+    print("🚀 Hello Krishna i am from GitHub Actions!")
 
 if __name__ == "__main__":
     main()
